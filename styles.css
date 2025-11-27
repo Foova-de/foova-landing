@@ -346,44 +346,107 @@ body {
     padding-bottom: 40px; /* sorgt für Luft ganz unten */
   }
 }
-/* --- Warum-FOOVA Cards: Mobile Finetuning --- */
+/* --- Warum-FOOVA Cards: iOS Style + Animation --- */
+
+.why {
+  padding-bottom: 32px;
+}
+
+.why-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Grundstil der Cards */
 
 .why-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
   background: #ffffff;
-  padding: 24px;
+  padding: 20px 18px;
   border-radius: 20px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-  margin-bottom: 20px;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  opacity: 0;
+  transform: translateY(18px);
+  animation: foovaFadeInUp 0.55s ease forwards;
 }
 
-.why-item h3 {
-  margin-top: 0;
-  margin-bottom: 8px;
-  font-size: 1.2rem;
+/* leichte Verzögerung je Card */
+
+.why-item:nth-child(1) {
+  animation-delay: 0.05s;
 }
 
-.why-item p {
+.why-item:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.why-item:nth-child(3) {
+  animation-delay: 0.25s;
+}
+
+/* Icon links */
+
+.why-icon {
+  flex: 0 0 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: rgba(255, 75, 75, 0.06); /* nutzt dein Rot als Tönung */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+/* Textbereich */
+
+.why-content h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.1rem;
+}
+
+.why-content p {
   margin: 0;
   line-height: 1.45;
-  color: #666;
+  color: #666666;
 }
 
-/* Hover-Effekt (wird nur Desktop aktiv, Mobile ignoriert automatisch) */
+/* Hover nur Desktop */
+
 @media (hover: hover) {
+  .why-item {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
   .why-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    transform: translateY( -4px );
+    box-shadow: 0 8px 22px rgba(0,0,0,0.12);
   }
 }
 
-/* Abstand vor Footer */
+/* Abstand vor Footer auf Mobile */
+
 @media (max-width: 768px) {
   .why {
-    margin-bottom: 48px;
+    margin-bottom: 40px;
   }
 
   footer {
     padding-bottom: 40px;
+  }
+}
+
+/* Fade-in Animation */
+
+@keyframes foovaFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
