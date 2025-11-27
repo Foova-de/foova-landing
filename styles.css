@@ -346,3 +346,44 @@ body {
     padding-bottom: 40px; /* sorgt für Luft ganz unten */
   }
 }
+/* --- Warum-FOOVA Cards: Mobile Finetuning --- */
+
+.why-item {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  margin-bottom: 20px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.why-item h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.why-item p {
+  margin: 0;
+  line-height: 1.45;
+  color: #666;
+}
+
+/* Hover-Effekt (wird nur Desktop aktiv, Mobile ignoriert automatisch) */
+@media (hover: hover) {
+  .why-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  }
+}
+
+/* Abstand vor Footer */
+@media (max-width: 768px) {
+  .why {
+    margin-bottom: 48px;
+  }
+
+  footer {
+    padding-bottom: 40px;
+  }
+}
