@@ -336,3 +336,13 @@ body {
     line-height: 1.5;
   }
 }
+/* Extra Abstand unter der Warum-FOOVA-Sektion auf Mobile */
+@media (max-width: 768px) {
+  .why {
+    margin-bottom: 48px; /* mehr Abstand zur Fußzeile */
+  }
+
+  footer {
+    padding-bottom: 40px; /* sorgt für Luft ganz unten */
+  }
+}
