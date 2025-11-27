@@ -1,47 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <title>Danke – FOOVA</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <title>Danke – FOOVA Warteliste</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
-  <div class="foova-page">
-    <header class="foova-header">
-      <div class="foova-logo">FOOVA</div>
-    </header>
+  <body>
+    <div class="foova-page">
+      <!-- HEADER -->
+      <header class="foova-header">
+        <div class="foova-logo">FOOVA</div>
+        <nav class="foova-nav">
+          <a href="/">Zur Startseite</a>
+        </nav>
+      </header>
 
-    <main>
-      <section class="hero hero-small">
-        <div class="hero-inner">
-          <p class="hero-kicker">Vielen Dank!</p>
+      <!-- HERO / DANKE-BLOCK -->
+      <main>
+        <section class="hero">
+          <div class="hero-inner">
+            <p class="hero-kicker">Danke – du stehst auf der Warteliste</p>
+            <h1>Du bist bei FOOVA vorgemerkt.</h1>
+            <p class="hero-subtitle">
+              Wir melden uns bei dir, sobald FOOVA in deiner Stadt startet.
+            </p>
 
-          <h1>Du bist jetzt auf der FOOVA-Warteliste.</h1>
+            <div class="hero-buttons">
+              <a href="/" class="btn primary">Zurück zur Startseite</a>
+            </div>
 
-          <p class="hero-subtitle">
-            Wir melden uns per E-Mail, sobald FOOVA in deiner Stadt live geht.
-          </p>
-
-          <div class="hero-buttons">
-            <a href="index.html" class="btn ghost">Zurück zur Startseite</a>
+            <ul class="hero-bullets">
+              <li>Deine Anmeldung ist bei uns eingegangen.</li>
+              <li>Du erhältst zusätzlich eine Bestätigungs-E-Mail.</li>
+              <li>Wir halten dich über den Launch von FOOVA auf dem Laufenden.</li>
+            </ul>
           </div>
+        </section>
+      </main>
 
-          <ul class="hero-bullets">
-            <li>Deine Anmeldung ist bei uns eingegangen.</li>
-            <li>Du bekommst eine Bestätigungs-E-Mail.</li>
-            <li>Wir halten dich über den Start von FOOVA auf dem Laufenden.</li>
-          </ul>
-        </div>
-      </section>
-    </main>
+      <!-- FOOTER -->
+      <footer class="foova-footer">
+        <p>© <span id="year"></span> FOOVA · Deine Lieblingsspots.</p>
+      </footer>
+    </div>
 
-    <footer class="foova-footer">
-      <p>© <span id="year"></span> FOOVA · Deine Lieblingsspots.</p>
-    </footer>
-  </div>
-
-  <script src="main.js"></script>
-</body>
+    <script>
+      // aktuelles Jahr im Footer
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
