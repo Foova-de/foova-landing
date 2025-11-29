@@ -450,3 +450,21 @@ body {
     transform: translateY(0);
   }
 }
+/* Foodie Button deutlicher sichtbar */
+.hero-buttons .btn.ghost {
+  display: inline-block;
+  padding: 12px 22px;
+  border: 2px solid var(--foova-red);
+  border-radius: 999px;
+  color: var(--foova-red);
+  font-weight: 600;
+  background: #fff;
+  transition: all 0.25s ease;
+}
+
+.hero-buttons .btn.ghost:hover {
+  background: var(--foova-red);
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(244, 75, 75, 0.25);
+  transform: translateY(-1px);
+}
